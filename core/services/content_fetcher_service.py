@@ -17,10 +17,10 @@ class ContentFetcherService(ABC, Generic[RequestType, ResponseType]):
         Executes the content fetching process.
 
         Args:
-            topic (str): The topic to fetch content for.
+            topic (RequestType): The topic to fetch content for.
 
         Returns:
-            str: The fetched content.
+            ResponseType: The fetched content.
         """
         return self._fetch_content(topic)
       
@@ -30,9 +30,9 @@ class ContentFetcherService(ABC, Generic[RequestType, ResponseType]):
         Abstract method to fetch content from a specific source.
 
         Args:
-            topic (str): The topic to fetch content for.
+            topic (RequestType): The topic to fetch content for.
 
         Returns:
-            str: The fetched content.
+            ResponseType: The fetched content.
         """
         pass
