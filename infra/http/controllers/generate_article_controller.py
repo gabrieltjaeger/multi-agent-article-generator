@@ -18,10 +18,9 @@ async def generate_article_controller(request: GenerateArticleParams) -> Article
       request (GenerateArticleParams): The request object containing the topic for the article.
   
   Returns:
-      str: The generated article content.
+      ArticleContentResponse: The generated article content.
   """
   try:
-    # Validate the request
     topic = request.topic
     
     generate_article_use_case: GenerateArticleUseCase = AppContainer.use_cases.generate_article_use_case
