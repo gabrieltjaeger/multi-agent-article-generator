@@ -8,6 +8,3 @@ class ContentRequest(BaseModel):
         example="Python programming",
         min_length=1,
     )
-
-    
-    
