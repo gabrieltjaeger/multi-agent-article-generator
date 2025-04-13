@@ -1,3 +1,4 @@
+import re
 from typing import Any, ClassVar
 
 from pydantic import ValidationError, model_validator
@@ -15,7 +16,7 @@ class ArticleContentResponse(ContentResponse):
         Ensures the content has at least the minimum number of words
         defined by MIN_WORDS. Word count is calculated by splitting the string.
         """
-        word_count = len(self.content.split())
+        word_count = len(re.findall(r'\b\w+\b', self.content))
         if word_count < self.MIN_WORDS:
             raise ValidationError.from_exception_data(
               title="Content Validation Error",
