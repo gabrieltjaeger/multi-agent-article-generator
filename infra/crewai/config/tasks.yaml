@@ -1,0 +1,30 @@
+research_topic:
+  description: >
+    Conduct thorough research on {topic} using the Wikipedia API tool. Organize key findings, verify the accuracy of the information, 
+    and structure the data in a way that facilitates article writing.
+  expected_output: >
+    A well-organized summary of the defined {topic} topic including definitions, relevant historical context, recent developments, 
+    and notable figures or events, all properly sourced and cross-verified.
+
+write_article:
+  description: >
+    Using the researched information, write a comprehensive, neutral, and well-structured blog article on {topic}. 
+    The tone should be informative, objective, and concise, for modern blog articles following the formatting and style of Markdown guidelines.
+  expected_output: >
+    A complete article ready for publication, including a lead section, headings, 
+    references, and an infobox if applicable, formatted using the many features of the Markdown language. The article should be engaging, informative, and free of grammatical errors, bias, or inconsistencies. Furthermore, it should have at least 300 words.
+
+review_article:
+  description: >
+    Carefully review the generated article to ensure factual accuracy, grammatical correctness, logical structure, 
+    and compliance with {topic}.
+  expected_output: >
+    A polished and approved article free of errors, bias, or inconsistencies, annotated with any necessary suggestions 
+    for future improvement or updates, and ensuring that it meets the standards of the {topic} topic. The review should also include a checklist of all aspects covered, such as grammar, structure, and neutrality. Also, ensuring that the article is free of any plagiarism, and has at least 300 words.
+
+enforce_markdown:
+  description: >
+    Ensure that the article adheres to Markdown formatting standards, including proper use of headings, lists, links, 
+    images, and other Markdown features.
+  expected_output: >
+    A fully formatted article that meets all Markdown standards, ensuring compatibility with various platforms and readability for users.
