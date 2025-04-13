@@ -147,7 +147,7 @@ class CrewAIArticleGeneratorService(
             ArticleContentResponse: The generated article.
         """
         crew = self.article_generation_crew()
-        result = crew.kickoff(inputs={"topic": topic})
+        result = await crew.kickoff_async(inputs={"topic": topic})
         
         if not result:
             raise ValueError("Failed to generate article.")
