@@ -17,10 +17,10 @@ class ArticleGeneratorService(ABC, Generic[RequestType, ResponseType]):
         Executes the article generation process.
 
         Args:
-            topic (str): The topic to generate an article for.
+            topic (RequestType): The topic to generate an article for.
 
         Returns:
-            str: The generated article.
+            ResponseType: The generated article.
         """
         return await self._generate_article(topic)
       
@@ -30,9 +30,9 @@ class ArticleGeneratorService(ABC, Generic[RequestType, ResponseType]):
         Abstract method to generate an article based on the provided topic.
 
         Args:
-            topic (str): The topic to generate an article for.
+            topic (RequestType): The topic to generate an article for.
 
         Returns:
-            str: The generated article.
+            ResponseType: The generated article.
         """
         pass
