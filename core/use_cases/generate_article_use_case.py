@@ -20,7 +20,7 @@ class GenerateArticleUseCase:
         Args:
             topic (ContentRequest): The topic to generate an article for.
         Returns:
-            ContentResponse: The generated article.
+            ArticleContentResponse: The generated article.
         """
         content: ArticleContentResponse = await self.article_generator_service.execute(topic)
         return content
