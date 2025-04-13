@@ -141,10 +141,10 @@ class CrewAIArticleGeneratorService(
         Generates an article based on the provided topic.
         
         Args:
-            topic (str): The topic to generate an article for.
+            topic (WikipediaContentRequest): The topic to generate an article for.
         
         Returns:
-            str: The generated article.
+            ArticleContentResponse: The generated article.
         """
         crew = self.article_generation_crew()
         result = crew.kickoff(inputs={"topic": topic})
@@ -153,4 +153,3 @@ class CrewAIArticleGeneratorService(
             raise ValueError("Failed to generate article.")
           
         return result.pydantic
-    
