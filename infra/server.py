@@ -27,5 +27,5 @@ async def validation_exception_handler(request, exc: ValidationError):
 async def general_exception_handler(request, exc: Exception):
     return JSONResponse(
         status_code=500,
-        content={"errors": [{"type": "server_error", "msg": str(exc)}]},
+        content={"errors": [{"type": "server_error", "msg": "An unexpected error occurred. Please try again later."}]},
     )
