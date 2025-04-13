@@ -136,7 +136,7 @@ This project provides a FastAPI application that serves a REST API for generatin
    - **Response Example:**
      ```json
      {
-       "article": "Artificial Intelligence (AI) is..."
+       "content": "Artificial Intelligence (AI) is..."
      }
      ```
 
